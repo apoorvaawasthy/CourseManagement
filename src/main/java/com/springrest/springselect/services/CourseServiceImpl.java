@@ -14,14 +14,12 @@ public class CourseServiceImpl implements CourseService {
    
     @Autowired
     private CourseDao courseDao;
-    List<Course> list;
-    public CourseServiceImpl(){
-        list=new ArrayList<>();
-        list.add(new Course(101,"React.js","Important course"));
-        list.add(new Course(102,"SpringBoot","course to learn how REST APIs work"));
-    
+       
+    public CourseServiceImpl()
+    {
+        
     }
-   
+       
     @Override
     public List<Course> getCourses() {
         return courseDao.findAll();
